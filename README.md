@@ -7,21 +7,21 @@
 * 避免重复，同一个类只做一件事，保证核心类的稳定。
 * 黑盒效应，逻辑应该完全不了解核心类的实现，只需要使用核心类接口暴露的接口。
 ## 一、创建型模式如下：                        
-1.[工厂模式的使用场景-(主要实现面对对象中的多态,避免使用switch来构建逻辑)]：(https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/factory.php)
+1.[工厂模式的使用场景-(主要实现面对对象中的多态,避免使用switch来构建逻辑)(https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/factory.php)]：
 * 支付场景:可能对应不同的支付网关：支付宝、财付通、网银在线等
 * 数据库：系统对接多个不同类型的数据库，mysql，oracle，sqlserver。
 * 用户注册：比如说普通用户，管理员用户等。
 
-2.[建筑者模式-应用场景同工厂模式]：(https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Builder.php)
+2.[建筑者模式-应用场景同工厂模式](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Builder.php)：
 * 建筑者模式VS工厂模式：
   （理论区别）建造者模式关注的是零件类型和装配工艺（顺序），这是它与工厂模式最大不同的地方，虽然同为创建类模式，但是重点不同。
 建造者模式是基本方法的调用顺序安排，也就是这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；而工厂模式则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。
    （现实区别)在现实的环境中主要简单的是使用工厂模式，如果有某个对象的构造方式需要多个步骤或者步骤的顺序不同产生的对象不同的时候就使用建造者模式。
 
-3.[原型模式]：(https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Clone.php)
+3.[原型模式](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Clone.php)：
  使用场景: 通过复制（克隆、拷贝）一个指定类型的对象来创建更多同类型的对象。这个指定的对象可被称为“原型”对象，也就是通过复制原型对象来得到更多同类型的对象。即原型设计模式。在php的很多模板库，都用到clone。如smarty,举个例子，比如说我刚从数据库中取出一个很大的对象，现在我需要在建立一个只更改很少的相同的对象就需要使用原型模式。
  
-4.[单例模式]:(https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/single.php)
+4.[单例模式](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/single.php):
  使用场景:需要共享资源，比如数据库地址池，日志系统等等：
  例子中使用trail获取getinstance来构造单例。
  
@@ -30,8 +30,10 @@
  使用场景：多利用在扩展第三方组件的情况下，单第三方组件不适合你的业务，是否直接修改第三方组件的代码，NO,NO,NO。使用适配器模式。
  ps:因适配器模式较为简单，暂未添加范例。
  
- 2.桥接模式bridge
+ 2.[桥接模式bridge](
  使用场景：桥接模式类似与工厂模式的注入版，适合与A与B模块的解耦，如果有2个业务模块是耦合在一起的时候可以使用桥接模式，将A注入到B中。
- 
+如例子所示,我们将向不同的职员发送不同的消息，可将不同职员类，消息类注入到发送类中。
+
+3.装饰器模式decorator
                         
 
