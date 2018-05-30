@@ -41,11 +41,16 @@
  迭代器模式在PHP中使用最多的应该就是文件类spl了，基本上迭代器都已经集成到语言中了，不建议自己去完成。
  例子中完成了迭代器遍历文件夹目录的操作。
  
- 5。[门面模式Facades]（https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Facades）:
+ 5。[门面模式Facades](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Facades）:
  使用场景：
  * 为一些复杂的子系统提供一组接口
  * 提高子系统的独立性
  * 在层次化结构中，可以使用门面模式定义系统的每一层的接口
  例子中我们将业务类的逻辑封装到子类中，门面只是提供一个访问子系统的一个路径而已，他不应该参与具体的业务逻辑。
  
-
+ 5。[代理模式porxy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/porxy）:
+ 使用场景：
+ * 代理模式 VS 装饰器模式
+ 代理模式的对象图与装饰模式对象图在结构上类似，但表达的目的各有不同，装饰者给对象动态增加行为，而代理则增加一些善后或者辅助工作，比如写日志。此外，代理只在需要时才创建RealSubject。
+ 例子中我们封装业务逻辑在代理中，处理相应的前置before或者后置after任务。
+ 
