@@ -35,5 +35,17 @@
 如例子所示,我们将向不同的职员发送不同的消息，可将不同职员类，消息类注入到发送类中。
 
 3.装饰器模式decorator
-                        
+ 装饰器模式同适配器模式相同，都是扩充之前的类的不同功能上，机构较为简单，暂未添加范例。
+ 
+ 4.[迭代器模式](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/iterator.php)；
+ 迭代器模式在PHP中使用最多的应该就是文件类spl了，基本上迭代器都已经集成到语言中了，不建议自己去完成。
+ 例子中完成了迭代器遍历文件夹目录的操作。
+ 
+ 5。[门面模式Facades]（https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Facades）:
+ 使用场景：
+ * 为一些复杂的子系统提供一组接口
+ * 提高子系统的独立性
+ * 在层次化结构中，可以使用门面模式定义系统的每一层的接口
+ 例子中我们将业务类的逻辑封装到子类中，门面只是提供一个访问子系统的一个路径而已，他不应该参与具体的业务逻辑。
+ 
 
