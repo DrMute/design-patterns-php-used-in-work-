@@ -50,7 +50,7 @@
  例子中完成了迭代器遍历文件夹目录的操作。
  
  
- 5.[门面模式Facades](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Facades):
+ 5.[门面模式Facades](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Facades.php):
  使用场景：
  * 为一些复杂的子系统提供一组接口
  * 提高子系统的独立性
@@ -58,10 +58,23 @@
  例子中我们将业务类的逻辑封装到子类中，门面只是提供一个访问子系统的一个路径而已，他不应该参与具体的业务逻辑。
  
  
- 6.[代理模式porxy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/porxy):
+ 6.[代理模式porxy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/proxy.php):
  使用场景：
  * 代理模式 VS 装饰器模式
  代理模式的对象图与装饰模式对象图在结构上类似，但表达的目的各有不同，装饰者给对象动态增加行为，而代理则增加一些善后或者辅助工作，比如写日志。此外，代理只在需要时才创建RealSubject。
  例子中我们封装业务逻辑在代理中，处理相应的前置before或者后置after任务。
+ 
+ 
+ ## 二、行为型模式如下：
+ [策略模式strategy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/strategy.php)：
+ 定义一组算法，将每个算法封装起来，他们之前可以相互替换，多用于只暴露少量方法(策略)的的服务，你可以不关心具体细节。
+ * strategy 抽象策略角色类，抽象算法，通常为接口。
+ * concreteStrategu 具体的策略角色类，实例话抽象策略的方法。
+ * context上下文类；调用时将具体的策略角色类注入到上下文类中调用方法。
+ VS 代理模式:
+ * 策略模式与代理模式的方法非常相似,不同的是代理模式中的代理类是和被代理类使用的同一接口。
+ 例子中对支付宝和微信的支付pay抽象成一个策略。
+ 
+ 
  
  
