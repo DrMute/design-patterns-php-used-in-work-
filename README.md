@@ -66,7 +66,7 @@
  
  
  ## 二、行为型模式如下：
- [策略模式strategy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/strategy.php)：
+ 1.[策略模式strategy](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/strategy.php)：
  定义一组算法，将每个算法封装起来，他们之前可以相互替换，多用于只暴露少量方法(策略)的的服务，你可以不关心具体细节。
  * strategy 抽象策略角色类，抽象算法，通常为接口。
  * concreteStrategu 具体的策略角色类，实例话抽象策略的方法。
@@ -75,7 +75,7 @@
  * 策略模式与代理模式的方法非常相似,不同的是代理模式中的代理类是和被代理类使用的同一接口。
  例子中对支付宝和微信的支付pay抽象成一个策略。
  
- [观察者模式observer](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/observer.php):
+ 2.[观察者模式observer](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/observer.php):
  观察者模式也是我们经常使用到的设计模式，也叫发布订阅模式。
  使用场景：定义对象间一对多的依赖关系，每当一个对象发生事件，在发生事件的同时也会得到相应的相依赖的事件。
 * subject 被观察者接口
@@ -85,19 +85,26 @@
 缺点:因为多个观察者中的事件是同步的，如果一个事件出现异常，将导致后续的事件无法执行，在这种情况下，最好采用异步的方式。
 
 
- [责任链模式responsibility_chain](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/responsibility_chain):
+ 3.[责任链模式responsibility_chain](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/responsibility_chain):
  观察者模式也是我们经常使用到的设计模式，也叫发布订阅模式。
  使用场景：当使用场景需要照不同的等级去处理事情的时候，就可以使用到责任链模式，常见于登陆或者需要相应权限去处理的情况。
  由于权限划分相对较为复杂，建议将权限等级或属性放入类库中来调用，。
 缺点:单链接的事务过多时，会造成相应的混乱。
 例子中是论坛中删帖的一个流程，会逐级上报，在判断权限再去调用区中的类去处理。
 
- [命令模式command](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/responsibility_chain):
- 使用场景：当使用场景需要照不同的等级去处理事情的时候，就可以使用到责任链模式，常见于登陆或者需要相应权限去处理的情况。
- 由于权限划分相对较为复杂，建议将权限等级或属性放入类库中来调用，。
-缺点:单链接的事务过多时，会造成相应的混乱。
-例子中是论坛中删帖的一个流程，会逐级上报，在判断权限再去调用区中的类去处理。
+ 4.[命令模式command]():
+ 使用场景：请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。
+ 现实情况是很少使用，一般使用策略模式或代理模式来实现相对应的需求。
  
  
+  5.[状态模式state](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/State.php):
+使用场景：对一些实时需要去更新状态，对象有多个状态值在不同的变化中，需要if-else各种操作的判断那会相当地复杂，这种情况下我们使用状态模式state。
+
+*state:状态类接口
+*concreteState:具体的状态类。
+* context:具体的封装类，把状态类注入进封装类中根据状态来执行相应的方法。
  
+ 
+  6.[访问者模式visitor]():
+
  
