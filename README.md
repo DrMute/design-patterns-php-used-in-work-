@@ -75,7 +75,17 @@
  * 策略模式与代理模式的方法非常相似,不同的是代理模式中的代理类是和被代理类使用的同一接口。
  例子中对支付宝和微信的支付pay抽象成一个策略。
  
- [
+ [观察者模式observer](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/observer.php):
+ 观察者模式也是我们经常使用到的设计模式，也叫发布订阅模式。
+ 使用场景：定义对象间一对多的依赖关系，每当一个对象发生事件，在发生事件的同时也会得到相应的相依赖的事件。
+* subject 被观察者接口
+* concreteSubject 具体的被观察者
+* observer 观察者接口
+* concreteobserver 具体的观察者
+缺点:因为多个观察者中的事件是同步的，如果一个事件出现异常，将导致后续的事件无法执行，在这种情况下，最好采用异步的方式。
+
+
+
  
  
  
