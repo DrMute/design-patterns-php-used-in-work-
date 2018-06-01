@@ -1,0 +1,47 @@
+<?php
+interface handle
+{
+    public function make($lev);
+    
+}
+ class admin implements  handle {
+        protected $power='1';
+        protected $top = 'submits'; 
+        public function make($lev){
+            if($lev<=$this->power){
+                echo '删帖子';
+            }else{
+                $topObj = new $this->top;
+                $topObj->make($lev);
+            }
+        }
+    }
+    //管理员权限
+    class submits implements handle {
+        protected $power='3';
+        protected $top = 'police'; 
+        public function make($lev){
+            if($lev<=$this->power){
+                echo '禁止用户发言';
+            }else{
+                $topObj = new $this->top;
+                $topObj->make($lev);
+            }
+        }
+    }
+    //警察权限
+    //责任链最高层（可以不用判断，责任链模式必须要用到最高一层）
+    class police implements handle  {
+        function make($lev){
+            echo '教育处理';
+        }
+    }
+    
+    
+    
+    
+    //一般是判断权限再去调用区中的类去处理
+    //这里的责任链模式
+    $lev = 1;
+    $adminObj = new admin();
+    $adminObj->make($lev);
