@@ -100,11 +100,12 @@
   5.[状态模式state](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/State.php):
 使用场景：对一些实时需要去更新状态，对象有多个状态值在不同的变化中，需要if-else各种操作的判断那会相当地复杂，这种情况下我们使用状态模式state。
 
-*state:状态类接口
-*concreteState:具体的状态类。
+* state:状态类接口
+* concreteState:具体的状态类。
 * context:具体的封装类，把状态类注入进封装类中根据状态来执行相应的方法。
  
  
-  6.[访问者模式visitor]():
-
+ 6.[访问者模式visitor]():
+ 7.[中介者模式mediator]():
  
+
