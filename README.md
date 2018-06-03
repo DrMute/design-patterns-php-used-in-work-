@@ -106,6 +106,12 @@
  
  
  6.[访问者模式visitor]():
- 7.[中介者模式mediator]():
+ 7.[中介者模式mediator](https://github.com/DrMute/design-patterns-php-used-in-work-/blob/master/Mediator.php):
+用一个中介对象封装一系列的对象交互，中介者使各对象不需要显示的相互作用，从而使其耦合松散，而且可以独立的改变他们之间的交互。
+简单的来说就是将中介者注入到具体事务对象中，每个具体事务对象都知道中介者的角色，而且同其他事务对象通信的时候通过中介者协作。
+* mediator 抽象中介者角色
+* concrete mediator 具体中介者角色
+* colleague 同事角色
+
  
 
